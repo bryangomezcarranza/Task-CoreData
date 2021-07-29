@@ -14,6 +14,9 @@
 		5B946AD726B0A52F00A9B390 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B946AD626B0A52F00A9B390 /* TaskController.swift */; };
 		5B946ADA26B0ADE000A9B390 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B946AD926B0ADE000A9B390 /* TaskTableViewCell.swift */; };
 		5B946ADD26B1015600A9B390 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B946ADC26B1015600A9B390 /* DateFormatter.swift */; };
+		5B946B0B26B20F1A00A9B390 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B946B0A26B20F1A00A9B390 /* NotificationManager.swift */; };
+		5B946B0D26B210DA00A9B390 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B946B0C26B210DA00A9B390 /* Constants.swift */; };
+		5B946B0F26B21D9100A9B390 /* TaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B946B0E26B21D9100A9B390 /* TaskScheduler.swift */; };
 		7EDB767125B6996A00B80B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB767025B6996A00B80B7D /* AppDelegate.swift */; };
 		7EDB767325B6996A00B80B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB767225B6996A00B80B7D /* SceneDelegate.swift */; };
 		7EDB767825B6996A00B80B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB767625B6996A00B80B7D /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		5B946AD626B0A52F00A9B390 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		5B946AD926B0ADE000A9B390 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		5B946ADC26B1015600A9B390 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		5B946B0A26B20F1A00A9B390 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		5B946B0C26B210DA00A9B390 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5B946B0E26B21D9100A9B390 /* TaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScheduler.swift; sourceTree = "<group>"; };
 		7EDB766D25B6996A00B80B7D /* Task-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDB767025B6996A00B80B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EDB767225B6996A00B80B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				5B946ADC26B1015600A9B390 /* DateFormatter.swift */,
+				5B946B0A26B20F1A00A9B390 /* NotificationManager.swift */,
+				5B946B0C26B210DA00A9B390 /* Constants.swift */,
+				5B946B0E26B21D9100A9B390 /* TaskScheduler.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,16 +239,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B946B0F26B21D9100A9B390 /* TaskScheduler.swift in Sources */,
 				7EDB767125B6996A00B80B7D /* AppDelegate.swift in Sources */,
 				7EDB767325B6996A00B80B7D /* SceneDelegate.swift in Sources */,
 				5B946ADA26B0ADE000A9B390 /* TaskTableViewCell.swift in Sources */,
 				5B946ACF26B09CFF00A9B390 /* TaskListTableViewController.swift in Sources */,
+				5B946B0B26B20F1A00A9B390 /* NotificationManager.swift in Sources */,
 				5B946ADD26B1015600A9B390 /* DateFormatter.swift in Sources */,
 				5B946AD526B0A35A00A9B390 /* Task+Convenience.swift in Sources */,
 				5B946AD326B0A0E500A9B390 /* CoreDataStack.swift in Sources */,
 				7EDB767B25B6996A00B80B7D /* Task_CoreData.xcdatamodeld in Sources */,
 				5B946AD726B0A52F00A9B390 /* TaskController.swift in Sources */,
 				5B946AD126B09EAD00A9B390 /* TaskDetailViewController.swift in Sources */,
+				5B946B0D26B210DA00A9B390 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

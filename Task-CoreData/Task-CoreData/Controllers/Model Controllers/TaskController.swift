@@ -10,6 +10,8 @@ import CoreData
 
 class TaskController {
     static let shared = TaskController()
+    let notificationScheduler = TaskScheduler()
+    
     var tasks: [Task] = []
     
     // Fetch Request Set.
@@ -25,6 +27,8 @@ class TaskController {
        let newTask = Task(name: name, notes: notes, dueDate: dueDate)
         tasks.append(newTask)
         CoreDataStack.saveContext()
+        
+        notificationScheduler.scheduleNotification(for: newTask)
     }
     func fetchTasks() {
         let task = (try? CoreDataStack.context.fetch(self.fetchRequest)) ?? []
@@ -35,10 +39,19 @@ class TaskController {
         task.notes = notes
         task.dueDate = dueDate
         CoreDataStack.saveContext()
+        
+        if !task.isComplete {
+            notificationScheduler.scheduleNotification(for: task)
+        }
     }
     func toggleIsComplete(task: Task) {
         task.isComplete.toggle()
         CoreDataStack.saveContext()
+        
+        if task.isComplete {
+            notificationScheduler.clearNotifications(for: task)
+        }
+        
     }
     func delete(task: Task) {
         CoreDataStack.context.delete(task)
